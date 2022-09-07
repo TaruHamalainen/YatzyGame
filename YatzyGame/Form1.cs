@@ -761,6 +761,13 @@ namespace YatzyGame
         private void btnChance_Click(object sender, EventArgs e)
         {
             // count value of dices
+            int scores = 0;
+            foreach(var dice in dices)
+            {
+                scores += dice.value;
+            }
+            if (txtChance.Text.Equals(string.Empty))
+                txtChance.Text += scores.ToString();
         }
     }
 }
