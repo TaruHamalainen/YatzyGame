@@ -55,6 +55,8 @@
             this.txtThreeOfKind = new System.Windows.Forms.TextBox();
             this.btnThreeOfKind = new System.Windows.Forms.Button();
             this.debug = new System.Windows.Forms.TextBox();
+            this.txtFourOfKind = new System.Windows.Forms.TextBox();
+            this.btnFourOfKind = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dice5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
@@ -299,12 +301,32 @@
             this.debug.Size = new System.Drawing.Size(100, 20);
             this.debug.TabIndex = 26;
             // 
+            // txtFourOfKind
+            // 
+            this.txtFourOfKind.Location = new System.Drawing.Point(517, 229);
+            this.txtFourOfKind.Name = "txtFourOfKind";
+            this.txtFourOfKind.Size = new System.Drawing.Size(100, 20);
+            this.txtFourOfKind.TabIndex = 27;
+            // 
+            // btnFourOfKind
+            // 
+            this.btnFourOfKind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFourOfKind.Location = new System.Drawing.Point(623, 228);
+            this.btnFourOfKind.Name = "btnFourOfKind";
+            this.btnFourOfKind.Size = new System.Drawing.Size(90, 23);
+            this.btnFourOfKind.TabIndex = 28;
+            this.btnFourOfKind.Text = "Four of kind";
+            this.btnFourOfKind.UseVisualStyleBackColor = false;
+            this.btnFourOfKind.Click += new System.EventHandler(this.btnFourOfKind_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnFourOfKind);
+            this.Controls.Add(this.txtFourOfKind);
             this.Controls.Add(this.debug);
             this.Controls.Add(this.btnThreeOfKind);
             this.Controls.Add(this.txtThreeOfKind);
@@ -374,6 +396,8 @@
         private System.Windows.Forms.TextBox txtThreeOfKind;
         private System.Windows.Forms.Button btnThreeOfKind;
         private System.Windows.Forms.TextBox debug;
+        private System.Windows.Forms.TextBox txtFourOfKind;
+        private System.Windows.Forms.Button btnFourOfKind;
     }
 }
 

@@ -570,7 +570,66 @@ namespace YatzyGame
             int scores = 0;
             bool threeOfKind = false;
            
+            // array of dices to sort
+            Dice[] sortedDices = new Dice[dices.Count];
+            // list of matched dices
+            List<Dice> matchedDices = new List<Dice>();
+
+                // add dices to sorted dices array
+                for (int i = 0; i < dices.Count; i++)
+                {
+                    sortedDices[i] = dices[i];
+                }
+                // sort array
+                Array.Sort(sortedDices);
+
+                // check first three dices for match, add values to scores
+                if (sortedDices[0].value == sortedDices[1].value &&
+                    sortedDices[1].value == sortedDices[2].value)
+                {
+                    matchedDices.Add(sortedDices[0]);
+                    matchedDices.Add(sortedDices[1]);
+                    matchedDices.Add(sortedDices[2]);
+                    threeOfKind = true;
+
+                    foreach (var dice in matchedDices)
+                    {
+                        scores += dice.value;
+                    }
+
+                }
+                // check last dices for match,add values to score
+                if (sortedDices[2].value == sortedDices[3].value &&
+                    sortedDices[3].value == sortedDices[4].value)
+                {
+                    matchedDices.Add(sortedDices[2]);
+                    matchedDices.Add(sortedDices[3]);
+                    matchedDices.Add(sortedDices[4]);
+                    threeOfKind = true;
+
+                    foreach (var dice in matchedDices)
+                    {
+                        scores += dice.value;
+                    }
+                }
+            // set scores to text box if not already inserted
+            if(txtThreeOfKind.Text.Equals(string.Empty))
+                txtThreeOfKind.Text = scores.ToString();    
+           
+            else
+            {
+                ShowMessage("Cant add");
+                return;
+            }
+            ResetGame();
+          
             
+        }
+
+        private void btnFourOfKind_Click(object sender, EventArgs e)
+        {
+            int scores = 0;
+            bool fourOfKind = false;
             Dice[] sortedDices = new Dice[dices.Count];
             List<Dice> matchedDices = new List<Dice>();
 
@@ -578,53 +637,49 @@ namespace YatzyGame
             {
                 sortedDices[i] = dices[i];
             }
-
             Array.Sort(sortedDices);
 
             if (sortedDices[0].value == sortedDices[1].value&&
-                sortedDices[1].value == sortedDices[2].value)
+                sortedDices[1].value == sortedDices[2].value&&
+                sortedDices[2].value == sortedDices[3].value)
             {
                 matchedDices.Add(sortedDices[0]);
                 matchedDices.Add(sortedDices[1]);
                 matchedDices.Add(sortedDices[2]);
-                threeOfKind = true;
+                matchedDices.Add(sortedDices[3]);
+                fourOfKind = true;
 
                 foreach(var dice in matchedDices)
                 {
                     scores += dice.value;
                 }
-                
             }
-            
-            if (sortedDices[2].value == sortedDices[3].value &&
+            if (!fourOfKind &&sortedDices[1].value == sortedDices[2].value&&
+                sortedDices[2].value == sortedDices[3].value&&
                 sortedDices[3].value == sortedDices[4].value)
             {
+                matchedDices.Add(sortedDices[1]);
                 matchedDices.Add(sortedDices[2]);
                 matchedDices.Add(sortedDices[3]);
                 matchedDices.Add(sortedDices[4]);
-                threeOfKind = true;
+                fourOfKind = true;
 
                 foreach(var dice in matchedDices)
                 {
                     scores += dice.value;
                 }
+
             }
-            if(txtThreeOfKind.Text.Equals(string.Empty))
-                txtThreeOfKind.Text = scores.ToString();
+            if(txtFourOfKind.Text.Equals(string.Empty))
+                txtFourOfKind.Text = scores.ToString();
             else
             {
                 ShowMessage("Cant add");
                 return;
             }
-            debug.Text = threeOfKind.ToString();
-            
+            ResetGame();
 
-           
-           
-
-
-            
-            
+            debug.Text = fourOfKind.ToString();
         }
     }
 }
