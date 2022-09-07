@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YatzyGame
 {
-    public class Dice: IComparable<Dice>
+    public class Dice:IComparable<Dice>
     {
         public Dice() { }
         public int value { get; set; }
@@ -21,6 +21,6 @@ namespace YatzyGame
             return -1;
         }
 
-        
+
     }
 }

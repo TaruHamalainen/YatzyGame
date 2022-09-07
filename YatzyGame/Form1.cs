@@ -21,7 +21,7 @@ namespace YatzyGame
             new Dice()
         };
         private List<PictureBox> pictureBoxes = new List<PictureBox>();
-        private int rolls = 3;
+        private int rolls;
         private Random rand = new Random();
         private int sectionOneScores;
         private int totalScores;
@@ -38,6 +38,7 @@ namespace YatzyGame
             pictureBoxes.Add(dice3);
             pictureBoxes.Add(dice4);
             pictureBoxes.Add(dice5);
+          
         }
         private void SetDiceImage(int value,PictureBox box)
         {
@@ -75,16 +76,19 @@ namespace YatzyGame
                     SetDiceImage(dices[i].value, pictureBoxes[i]);
                 }
             }
+          
 
         }
         private void ResetGame()
         {
-            for(int i = 0; i < dices.Count; i++)
+            rolls = 0;
+            txtRolls.Text = rolls.ToString();   
+            btnRoll.Enabled = true;
+            for (int i = 0; i < dices.Count; i++)
             {
                 dices[i] = new Dice();
                 pictureBoxes[i].Image = null;
             }
-            
         }
         private void ShowMessage(string message)
         {
@@ -114,7 +118,24 @@ namespace YatzyGame
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
-            RollDice();
+
+
+
+            if (rolls < 3)
+            {
+                RollDice();
+                rolls++;
+            }
+               
+            else
+            {
+                btnRoll.Enabled = false;
+                ShowMessage("Insert values");
+            }
+            
+            txtRolls.Text = rolls.ToString();
+
+
         }
 
         private void Dice1Hold(object sender, EventArgs e)
@@ -679,7 +700,7 @@ namespace YatzyGame
             }
             ResetGame();
 
-            debug.Text = fourOfKind.ToString();
+            txtRolls.Text = fourOfKind.ToString();
         }
 
         private void btnFullHouse_Click(object sender, EventArgs e)

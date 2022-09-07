@@ -54,7 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtThreeOfKind = new System.Windows.Forms.TextBox();
             this.btnThreeOfKind = new System.Windows.Forms.Button();
-            this.debug = new System.Windows.Forms.TextBox();
+            this.txtRolls = new System.Windows.Forms.TextBox();
             this.txtFourOfKind = new System.Windows.Forms.TextBox();
             this.btnFourOfKind = new System.Windows.Forms.Button();
             this.txtFullHouse = new System.Windows.Forms.TextBox();
@@ -306,12 +306,12 @@
             this.btnThreeOfKind.UseVisualStyleBackColor = false;
             this.btnThreeOfKind.Click += new System.EventHandler(this.btnThreeOfKind_Click);
             // 
-            // debug
+            // txtRolls
             // 
-            this.debug.Location = new System.Drawing.Point(313, 270);
-            this.debug.Name = "debug";
-            this.debug.Size = new System.Drawing.Size(100, 20);
-            this.debug.TabIndex = 26;
+            this.txtRolls.Location = new System.Drawing.Point(338, 167);
+            this.txtRolls.Name = "txtRolls";
+            this.txtRolls.Size = new System.Drawing.Size(75, 20);
+            this.txtRolls.TabIndex = 26;
             // 
             // txtFourOfKind
             // 
@@ -457,7 +457,7 @@
             this.Controls.Add(this.txtFullHouse);
             this.Controls.Add(this.btnFourOfKind);
             this.Controls.Add(this.txtFourOfKind);
-            this.Controls.Add(this.debug);
+            this.Controls.Add(this.txtRolls);
             this.Controls.Add(this.btnThreeOfKind);
             this.Controls.Add(this.txtThreeOfKind);
             this.Controls.Add(this.label3);
@@ -525,7 +525,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtThreeOfKind;
         private System.Windows.Forms.Button btnThreeOfKind;
-        private System.Windows.Forms.TextBox debug;
+        private System.Windows.Forms.TextBox txtRolls;
         private System.Windows.Forms.TextBox txtFourOfKind;
         private System.Windows.Forms.Button btnFourOfKind;
         private System.Windows.Forms.TextBox txtFullHouse;
