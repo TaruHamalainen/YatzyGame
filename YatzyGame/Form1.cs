@@ -684,8 +684,44 @@ namespace YatzyGame
 
         private void btnFullHouse_Click(object sender, EventArgs e)
         {
-            // three of kind and two of kind
-            // 25 points
+            int scores = 0;
+            bool twoSame = false;
+            bool threeSame = false;
+           
+            Dice[] sortedDices = new Dice[dices.Count];
+           
+            // add dices to array
+            for(int i = 0; i < dices.Count; i++)
+            {
+                sortedDices[i] = dices[i];
+            }
+            // sort array
+            Array.Sort(sortedDices);
+
+            // check if first three is same
+            if (sortedDices[0].value == sortedDices[1].value&&
+                sortedDices[1].value == sortedDices[2].value ||
+                sortedDices[2].value == sortedDices[3].value)
+            {
+                threeSame = true;
+            }
+            // check if last two is same
+            if (sortedDices[3].value == sortedDices[4].value)
+            {
+                twoSame = true;
+            }
+            // full house
+            if(threeSame && twoSame)
+                scores += 25;
+            
+            else
+                scores = 0;
+            if (txtFullHouse.Text.Equals(string.Empty))
+                txtFullHouse.Text = scores.ToString();
+            else
+                ShowMessage("Cant insert");
+           
+            ResetGame();
         }
 
         private void btnSmallStraight_Click(object sender, EventArgs e)
@@ -702,8 +738,24 @@ namespace YatzyGame
 
         private void btnYatzy_Click(object sender, EventArgs e)
         {
-            // all same
-            // points 50
+            int scores = 0;
+            Dice[] sortedDices = new Dice[dices.Count];
+            for (int i = 0; i < dices.Count; i++)
+                sortedDices[i] = dices[i];
+            Array.Sort(sortedDices);
+            if (sortedDices[0].value == sortedDices[4].value)
+                scores += 50;
+            else
+                scores = 0;
+            if (txtYatzy.Text.Equals(string.Empty))
+                txtYatzy.Text = scores.ToString();
+            else
+            {
+                ShowMessage("Cant insert");
+                return;
+            }
+               
+
         }
 
         private void btnChance_Click(object sender, EventArgs e)
