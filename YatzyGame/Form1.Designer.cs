@@ -66,6 +66,7 @@
             this.dice5.Size = new System.Drawing.Size(51, 50);
             this.dice5.TabIndex = 4;
             this.dice5.TabStop = false;
+            this.dice5.Click += new System.EventHandler(this.Dice5Hold);
             // 
             // dice4
             // 
@@ -74,6 +75,7 @@
             this.dice4.Size = new System.Drawing.Size(53, 50);
             this.dice4.TabIndex = 3;
             this.dice4.TabStop = false;
+            this.dice4.Click += new System.EventHandler(this.Dice4Hold);
             // 
             // dice3
             // 
@@ -82,6 +84,7 @@
             this.dice3.Size = new System.Drawing.Size(55, 50);
             this.dice3.TabIndex = 2;
             this.dice3.TabStop = false;
+            this.dice3.Click += new System.EventHandler(this.Dice3Hold);
             // 
             // dice2
             // 
