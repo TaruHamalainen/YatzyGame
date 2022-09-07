@@ -90,6 +90,7 @@
             this.dice2.Size = new System.Drawing.Size(56, 50);
             this.dice2.TabIndex = 1;
             this.dice2.TabStop = false;
+            this.dice2.Click += new System.EventHandler(this.Dice2Hold);
             // 
             // dice1
             // 
