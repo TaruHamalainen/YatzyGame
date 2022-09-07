@@ -57,6 +57,18 @@
             this.debug = new System.Windows.Forms.TextBox();
             this.txtFourOfKind = new System.Windows.Forms.TextBox();
             this.btnFourOfKind = new System.Windows.Forms.Button();
+            this.txtFullHouse = new System.Windows.Forms.TextBox();
+            this.btnFullHouse = new System.Windows.Forms.Button();
+            this.txtSmallStraight = new System.Windows.Forms.TextBox();
+            this.btnSmallStraight = new System.Windows.Forms.Button();
+            this.txtLargeStraight = new System.Windows.Forms.TextBox();
+            this.btnLargeStraight = new System.Windows.Forms.Button();
+            this.txtYatzy = new System.Windows.Forms.TextBox();
+            this.btnYatzy = new System.Windows.Forms.Button();
+            this.txtChance = new System.Windows.Forms.TextBox();
+            this.btnChance = new System.Windows.Forms.Button();
+            this.txtSection2Total = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dice5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
@@ -76,7 +88,7 @@
             // 
             // txtTotalScores
             // 
-            this.txtTotalScores.Location = new System.Drawing.Point(668, 418);
+            this.txtTotalScores.Location = new System.Drawing.Point(517, 380);
             this.txtTotalScores.Name = "txtTotalScores";
             this.txtTotalScores.Size = new System.Drawing.Size(100, 20);
             this.txtTotalScores.TabIndex = 6;
@@ -128,7 +140,7 @@
             // 
             // txtOnes
             // 
-            this.txtOnes.Location = new System.Drawing.Point(142, 204);
+            this.txtOnes.Location = new System.Drawing.Point(143, 167);
             this.txtOnes.Name = "txtOnes";
             this.txtOnes.Size = new System.Drawing.Size(100, 20);
             this.txtOnes.TabIndex = 7;
@@ -136,7 +148,7 @@
             // btnOnes
             // 
             this.btnOnes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnOnes.Location = new System.Drawing.Point(46, 204);
+            this.btnOnes.Location = new System.Drawing.Point(47, 167);
             this.btnOnes.Name = "btnOnes";
             this.btnOnes.Size = new System.Drawing.Size(75, 23);
             this.btnOnes.TabIndex = 8;
@@ -146,7 +158,7 @@
             // 
             // txtTwos
             // 
-            this.txtTwos.Location = new System.Drawing.Point(142, 231);
+            this.txtTwos.Location = new System.Drawing.Point(143, 194);
             this.txtTwos.Name = "txtTwos";
             this.txtTwos.Size = new System.Drawing.Size(100, 20);
             this.txtTwos.TabIndex = 9;
@@ -154,7 +166,7 @@
             // btnTwos
             // 
             this.btnTwos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnTwos.Location = new System.Drawing.Point(46, 229);
+            this.btnTwos.Location = new System.Drawing.Point(47, 192);
             this.btnTwos.Name = "btnTwos";
             this.btnTwos.Size = new System.Drawing.Size(75, 23);
             this.btnTwos.TabIndex = 10;
@@ -164,14 +176,14 @@
             // 
             // txtSectionOneScores
             // 
-            this.txtSectionOneScores.Location = new System.Drawing.Point(142, 375);
+            this.txtSectionOneScores.Location = new System.Drawing.Point(143, 338);
             this.txtSectionOneScores.Name = "txtSectionOneScores";
             this.txtSectionOneScores.Size = new System.Drawing.Size(100, 20);
             this.txtSectionOneScores.TabIndex = 11;
             // 
             // txtThrees
             // 
-            this.txtThrees.Location = new System.Drawing.Point(142, 258);
+            this.txtThrees.Location = new System.Drawing.Point(143, 221);
             this.txtThrees.Name = "txtThrees";
             this.txtThrees.Size = new System.Drawing.Size(100, 20);
             this.txtThrees.TabIndex = 12;
@@ -179,7 +191,7 @@
             // btnThrees
             // 
             this.btnThrees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnThrees.Location = new System.Drawing.Point(46, 254);
+            this.btnThrees.Location = new System.Drawing.Point(47, 217);
             this.btnThrees.Name = "btnThrees";
             this.btnThrees.Size = new System.Drawing.Size(75, 23);
             this.btnThrees.TabIndex = 13;
@@ -189,7 +201,7 @@
             // 
             // txtFours
             // 
-            this.txtFours.Location = new System.Drawing.Point(142, 285);
+            this.txtFours.Location = new System.Drawing.Point(143, 248);
             this.txtFours.Name = "txtFours";
             this.txtFours.Size = new System.Drawing.Size(100, 20);
             this.txtFours.TabIndex = 14;
@@ -197,7 +209,7 @@
             // btnFours
             // 
             this.btnFours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnFours.Location = new System.Drawing.Point(46, 285);
+            this.btnFours.Location = new System.Drawing.Point(47, 248);
             this.btnFours.Name = "btnFours";
             this.btnFours.Size = new System.Drawing.Size(75, 23);
             this.btnFours.TabIndex = 15;
@@ -207,7 +219,7 @@
             // 
             // txtFives
             // 
-            this.txtFives.Location = new System.Drawing.Point(142, 311);
+            this.txtFives.Location = new System.Drawing.Point(143, 274);
             this.txtFives.Name = "txtFives";
             this.txtFives.Size = new System.Drawing.Size(100, 20);
             this.txtFives.TabIndex = 16;
@@ -215,7 +227,7 @@
             // btnFives
             // 
             this.btnFives.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnFives.Location = new System.Drawing.Point(46, 315);
+            this.btnFives.Location = new System.Drawing.Point(47, 278);
             this.btnFives.Name = "btnFives";
             this.btnFives.Size = new System.Drawing.Size(75, 23);
             this.btnFives.TabIndex = 17;
@@ -225,7 +237,7 @@
             // 
             // txtSixes
             // 
-            this.txtSixes.Location = new System.Drawing.Point(142, 341);
+            this.txtSixes.Location = new System.Drawing.Point(143, 304);
             this.txtSixes.Name = "txtSixes";
             this.txtSixes.Size = new System.Drawing.Size(100, 20);
             this.txtSixes.TabIndex = 18;
@@ -233,7 +245,7 @@
             // btnSixes
             // 
             this.btnSixes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSixes.Location = new System.Drawing.Point(46, 341);
+            this.btnSixes.Location = new System.Drawing.Point(47, 304);
             this.btnSixes.Name = "btnSixes";
             this.btnSixes.Size = new System.Drawing.Size(75, 23);
             this.btnSixes.TabIndex = 19;
@@ -244,7 +256,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 382);
+            this.label1.Location = new System.Drawing.Point(44, 345);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 20;
@@ -253,7 +265,7 @@
             // txtBonus1
             // 
             this.txtBonus1.BackColor = System.Drawing.Color.White;
-            this.txtBonus1.Location = new System.Drawing.Point(142, 402);
+            this.txtBonus1.Location = new System.Drawing.Point(143, 365);
             this.txtBonus1.Name = "txtBonus1";
             this.txtBonus1.Size = new System.Drawing.Size(100, 20);
             this.txtBonus1.TabIndex = 21;
@@ -261,7 +273,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 409);
+            this.label2.Location = new System.Drawing.Point(44, 372);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 22;
@@ -270,15 +282,15 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(620, 425);
+            this.label3.Location = new System.Drawing.Point(623, 383);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 23;
-            this.label3.Text = "TOTAL";
+            this.label3.Text = "TOTAL POINTS";
             // 
             // txtThreeOfKind
             // 
-            this.txtThreeOfKind.Location = new System.Drawing.Point(517, 204);
+            this.txtThreeOfKind.Location = new System.Drawing.Point(517, 167);
             this.txtThreeOfKind.Name = "txtThreeOfKind";
             this.txtThreeOfKind.Size = new System.Drawing.Size(100, 20);
             this.txtThreeOfKind.TabIndex = 24;
@@ -286,7 +298,7 @@
             // btnThreeOfKind
             // 
             this.btnThreeOfKind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnThreeOfKind.Location = new System.Drawing.Point(623, 204);
+            this.btnThreeOfKind.Location = new System.Drawing.Point(623, 167);
             this.btnThreeOfKind.Name = "btnThreeOfKind";
             this.btnThreeOfKind.Size = new System.Drawing.Size(90, 23);
             this.btnThreeOfKind.TabIndex = 25;
@@ -296,14 +308,14 @@
             // 
             // debug
             // 
-            this.debug.Location = new System.Drawing.Point(432, 317);
+            this.debug.Location = new System.Drawing.Point(313, 270);
             this.debug.Name = "debug";
             this.debug.Size = new System.Drawing.Size(100, 20);
             this.debug.TabIndex = 26;
             // 
             // txtFourOfKind
             // 
-            this.txtFourOfKind.Location = new System.Drawing.Point(517, 229);
+            this.txtFourOfKind.Location = new System.Drawing.Point(517, 192);
             this.txtFourOfKind.Name = "txtFourOfKind";
             this.txtFourOfKind.Size = new System.Drawing.Size(100, 20);
             this.txtFourOfKind.TabIndex = 27;
@@ -311,7 +323,7 @@
             // btnFourOfKind
             // 
             this.btnFourOfKind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnFourOfKind.Location = new System.Drawing.Point(623, 228);
+            this.btnFourOfKind.Location = new System.Drawing.Point(623, 191);
             this.btnFourOfKind.Name = "btnFourOfKind";
             this.btnFourOfKind.Size = new System.Drawing.Size(90, 23);
             this.btnFourOfKind.TabIndex = 28;
@@ -319,12 +331,130 @@
             this.btnFourOfKind.UseVisualStyleBackColor = false;
             this.btnFourOfKind.Click += new System.EventHandler(this.btnFourOfKind_Click);
             // 
+            // txtFullHouse
+            // 
+            this.txtFullHouse.Location = new System.Drawing.Point(517, 219);
+            this.txtFullHouse.Name = "txtFullHouse";
+            this.txtFullHouse.Size = new System.Drawing.Size(100, 20);
+            this.txtFullHouse.TabIndex = 29;
+            // 
+            // btnFullHouse
+            // 
+            this.btnFullHouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFullHouse.Location = new System.Drawing.Point(624, 216);
+            this.btnFullHouse.Name = "btnFullHouse";
+            this.btnFullHouse.Size = new System.Drawing.Size(89, 23);
+            this.btnFullHouse.TabIndex = 30;
+            this.btnFullHouse.Text = "Full House";
+            this.btnFullHouse.UseVisualStyleBackColor = false;
+            this.btnFullHouse.Click += new System.EventHandler(this.btnFullHouse_Click);
+            // 
+            // txtSmallStraight
+            // 
+            this.txtSmallStraight.Location = new System.Drawing.Point(517, 246);
+            this.txtSmallStraight.Name = "txtSmallStraight";
+            this.txtSmallStraight.Size = new System.Drawing.Size(100, 20);
+            this.txtSmallStraight.TabIndex = 31;
+            // 
+            // btnSmallStraight
+            // 
+            this.btnSmallStraight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSmallStraight.Location = new System.Drawing.Point(623, 242);
+            this.btnSmallStraight.Name = "btnSmallStraight";
+            this.btnSmallStraight.Size = new System.Drawing.Size(90, 23);
+            this.btnSmallStraight.TabIndex = 32;
+            this.btnSmallStraight.Text = "Small Straight";
+            this.btnSmallStraight.UseVisualStyleBackColor = false;
+            this.btnSmallStraight.Click += new System.EventHandler(this.btnSmallStraight_Click);
+            // 
+            // txtLargeStraight
+            // 
+            this.txtLargeStraight.Location = new System.Drawing.Point(517, 273);
+            this.txtLargeStraight.Name = "txtLargeStraight";
+            this.txtLargeStraight.Size = new System.Drawing.Size(100, 20);
+            this.txtLargeStraight.TabIndex = 33;
+            // 
+            // btnLargeStraight
+            // 
+            this.btnLargeStraight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLargeStraight.Location = new System.Drawing.Point(624, 270);
+            this.btnLargeStraight.Name = "btnLargeStraight";
+            this.btnLargeStraight.Size = new System.Drawing.Size(89, 23);
+            this.btnLargeStraight.TabIndex = 34;
+            this.btnLargeStraight.Text = "Large Straight";
+            this.btnLargeStraight.UseVisualStyleBackColor = false;
+            this.btnLargeStraight.Click += new System.EventHandler(this.btnLargeStraight_Click);
+            // 
+            // txtYatzy
+            // 
+            this.txtYatzy.Location = new System.Drawing.Point(517, 300);
+            this.txtYatzy.Name = "txtYatzy";
+            this.txtYatzy.Size = new System.Drawing.Size(100, 20);
+            this.txtYatzy.TabIndex = 35;
+            // 
+            // btnYatzy
+            // 
+            this.btnYatzy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnYatzy.Location = new System.Drawing.Point(623, 297);
+            this.btnYatzy.Name = "btnYatzy";
+            this.btnYatzy.Size = new System.Drawing.Size(89, 23);
+            this.btnYatzy.TabIndex = 36;
+            this.btnYatzy.Text = "Yatzy";
+            this.btnYatzy.UseVisualStyleBackColor = false;
+            this.btnYatzy.Click += new System.EventHandler(this.btnYatzy_Click);
+            // 
+            // txtChance
+            // 
+            this.txtChance.Location = new System.Drawing.Point(517, 327);
+            this.txtChance.Name = "txtChance";
+            this.txtChance.Size = new System.Drawing.Size(100, 20);
+            this.txtChance.TabIndex = 37;
+            // 
+            // btnChance
+            // 
+            this.btnChance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnChance.Location = new System.Drawing.Point(623, 324);
+            this.btnChance.Name = "btnChance";
+            this.btnChance.Size = new System.Drawing.Size(86, 23);
+            this.btnChance.TabIndex = 38;
+            this.btnChance.Text = "Chance";
+            this.btnChance.UseVisualStyleBackColor = false;
+            this.btnChance.Click += new System.EventHandler(this.btnChance_Click);
+            // 
+            // txtSection2Total
+            // 
+            this.txtSection2Total.Location = new System.Drawing.Point(517, 354);
+            this.txtSection2Total.Name = "txtSection2Total";
+            this.txtSection2Total.Size = new System.Drawing.Size(100, 20);
+            this.txtSection2Total.TabIndex = 39;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(623, 357);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Section Total";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtSection2Total);
+            this.Controls.Add(this.btnChance);
+            this.Controls.Add(this.txtChance);
+            this.Controls.Add(this.btnYatzy);
+            this.Controls.Add(this.txtYatzy);
+            this.Controls.Add(this.btnLargeStraight);
+            this.Controls.Add(this.txtLargeStraight);
+            this.Controls.Add(this.btnSmallStraight);
+            this.Controls.Add(this.txtSmallStraight);
+            this.Controls.Add(this.btnFullHouse);
+            this.Controls.Add(this.txtFullHouse);
             this.Controls.Add(this.btnFourOfKind);
             this.Controls.Add(this.txtFourOfKind);
             this.Controls.Add(this.debug);
@@ -398,6 +528,18 @@
         private System.Windows.Forms.TextBox debug;
         private System.Windows.Forms.TextBox txtFourOfKind;
         private System.Windows.Forms.Button btnFourOfKind;
+        private System.Windows.Forms.TextBox txtFullHouse;
+        private System.Windows.Forms.Button btnFullHouse;
+        private System.Windows.Forms.TextBox txtSmallStraight;
+        private System.Windows.Forms.Button btnSmallStraight;
+        private System.Windows.Forms.TextBox txtLargeStraight;
+        private System.Windows.Forms.Button btnLargeStraight;
+        private System.Windows.Forms.TextBox txtYatzy;
+        private System.Windows.Forms.Button btnYatzy;
+        private System.Windows.Forms.TextBox txtChance;
+        private System.Windows.Forms.Button btnChance;
+        private System.Windows.Forms.TextBox txtSection2Total;
+        private System.Windows.Forms.Label label4;
     }
 }
 

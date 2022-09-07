@@ -681,5 +681,34 @@ namespace YatzyGame
 
             debug.Text = fourOfKind.ToString();
         }
+
+        private void btnFullHouse_Click(object sender, EventArgs e)
+        {
+            // three of kind and two of kind
+            // 25 points
+        }
+
+        private void btnSmallStraight_Click(object sender, EventArgs e)
+        {
+            // 1,2,3,4,5
+            // 15 points
+        }
+
+        private void btnLargeStraight_Click(object sender, EventArgs e)
+        {
+            // 2,3,4,5,6
+            // 20 points
+        }
+
+        private void btnYatzy_Click(object sender, EventArgs e)
+        {
+            // all same
+            // points 50
+        }
+
+        private void btnChance_Click(object sender, EventArgs e)
+        {
+            // count value of dices
+        }
     }
 }
