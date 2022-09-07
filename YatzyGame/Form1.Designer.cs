@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnRoll = new System.Windows.Forms.Button();
-            this.debug = new System.Windows.Forms.TextBox();
+            this.txtTotalScores = new System.Windows.Forms.TextBox();
             this.dice5 = new System.Windows.Forms.PictureBox();
             this.dice4 = new System.Windows.Forms.PictureBox();
             this.dice3 = new System.Windows.Forms.PictureBox();
@@ -42,6 +42,15 @@
             this.txtSectionOneScores = new System.Windows.Forms.TextBox();
             this.txtThrees = new System.Windows.Forms.TextBox();
             this.btnThrees = new System.Windows.Forms.Button();
+            this.txtFours = new System.Windows.Forms.TextBox();
+            this.btnFours = new System.Windows.Forms.Button();
+            this.txtFives = new System.Windows.Forms.TextBox();
+            this.btnFives = new System.Windows.Forms.Button();
+            this.txtSixes = new System.Windows.Forms.TextBox();
+            this.btnSixes = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBonus1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dice5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
@@ -59,12 +68,12 @@
             this.btnRoll.UseVisualStyleBackColor = true;
             this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
             // 
-            // debug
+            // txtTotalScores
             // 
-            this.debug.Location = new System.Drawing.Point(668, 418);
-            this.debug.Name = "debug";
-            this.debug.Size = new System.Drawing.Size(100, 20);
-            this.debug.TabIndex = 6;
+            this.txtTotalScores.Location = new System.Drawing.Point(668, 418);
+            this.txtTotalScores.Name = "txtTotalScores";
+            this.txtTotalScores.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalScores.TabIndex = 6;
             // 
             // dice5
             // 
@@ -147,7 +156,7 @@
             // 
             // txtSectionOneScores
             // 
-            this.txtSectionOneScores.Location = new System.Drawing.Point(142, 382);
+            this.txtSectionOneScores.Location = new System.Drawing.Point(142, 375);
             this.txtSectionOneScores.Name = "txtSectionOneScores";
             this.txtSectionOneScores.Size = new System.Drawing.Size(100, 20);
             this.txtSectionOneScores.TabIndex = 11;
@@ -169,11 +178,97 @@
             this.btnThrees.UseVisualStyleBackColor = true;
             this.btnThrees.Click += new System.EventHandler(this.btnThrees_Click);
             // 
+            // txtFours
+            // 
+            this.txtFours.Location = new System.Drawing.Point(142, 285);
+            this.txtFours.Name = "txtFours";
+            this.txtFours.Size = new System.Drawing.Size(100, 20);
+            this.txtFours.TabIndex = 14;
+            // 
+            // btnFours
+            // 
+            this.btnFours.Location = new System.Drawing.Point(46, 285);
+            this.btnFours.Name = "btnFours";
+            this.btnFours.Size = new System.Drawing.Size(75, 23);
+            this.btnFours.TabIndex = 15;
+            this.btnFours.Text = "Fours";
+            this.btnFours.UseVisualStyleBackColor = true;
+            this.btnFours.Click += new System.EventHandler(this.btnFours_Click);
+            // 
+            // txtFives
+            // 
+            this.txtFives.Location = new System.Drawing.Point(142, 311);
+            this.txtFives.Name = "txtFives";
+            this.txtFives.Size = new System.Drawing.Size(100, 20);
+            this.txtFives.TabIndex = 16;
+            // 
+            // btnFives
+            // 
+            this.btnFives.Location = new System.Drawing.Point(46, 315);
+            this.btnFives.Name = "btnFives";
+            this.btnFives.Size = new System.Drawing.Size(75, 23);
+            this.btnFives.TabIndex = 17;
+            this.btnFives.Text = "Fives";
+            this.btnFives.UseVisualStyleBackColor = true;
+            this.btnFives.Click += new System.EventHandler(this.btnFives_Click);
+            // 
+            // txtSixes
+            // 
+            this.txtSixes.Location = new System.Drawing.Point(142, 341);
+            this.txtSixes.Name = "txtSixes";
+            this.txtSixes.Size = new System.Drawing.Size(100, 20);
+            this.txtSixes.TabIndex = 18;
+            // 
+            // btnSixes
+            // 
+            this.btnSixes.Location = new System.Drawing.Point(46, 341);
+            this.btnSixes.Name = "btnSixes";
+            this.btnSixes.Size = new System.Drawing.Size(75, 23);
+            this.btnSixes.TabIndex = 19;
+            this.btnSixes.Text = "Sixes";
+            this.btnSixes.UseVisualStyleBackColor = true;
+            this.btnSixes.Click += new System.EventHandler(this.btnSixes_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(43, 382);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Section Total";
+            // 
+            // txtBonus1
+            // 
+            this.txtBonus1.BackColor = System.Drawing.Color.White;
+            this.txtBonus1.Location = new System.Drawing.Point(142, 402);
+            this.txtBonus1.Name = "txtBonus1";
+            this.txtBonus1.Size = new System.Drawing.Size(100, 20);
+            this.txtBonus1.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 409);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Section Bonus";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtBonus1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSixes);
+            this.Controls.Add(this.txtSixes);
+            this.Controls.Add(this.btnFives);
+            this.Controls.Add(this.txtFives);
+            this.Controls.Add(this.btnFours);
+            this.Controls.Add(this.txtFours);
             this.Controls.Add(this.btnThrees);
             this.Controls.Add(this.txtThrees);
             this.Controls.Add(this.txtSectionOneScores);
@@ -181,7 +276,7 @@
             this.Controls.Add(this.txtTwos);
             this.Controls.Add(this.btnOnes);
             this.Controls.Add(this.txtOnes);
-            this.Controls.Add(this.debug);
+            this.Controls.Add(this.txtTotalScores);
             this.Controls.Add(this.btnRoll);
             this.Controls.Add(this.dice5);
             this.Controls.Add(this.dice4);
@@ -209,7 +304,7 @@
         private System.Windows.Forms.PictureBox dice4;
         private System.Windows.Forms.PictureBox dice5;
         private System.Windows.Forms.Button btnRoll;
-        private System.Windows.Forms.TextBox debug;
+        private System.Windows.Forms.TextBox txtTotalScores;
         private System.Windows.Forms.TextBox txtOnes;
         private System.Windows.Forms.Button btnOnes;
         private System.Windows.Forms.TextBox txtTwos;
@@ -217,6 +312,15 @@
         private System.Windows.Forms.TextBox txtSectionOneScores;
         private System.Windows.Forms.TextBox txtThrees;
         private System.Windows.Forms.Button btnThrees;
+        private System.Windows.Forms.TextBox txtFours;
+        private System.Windows.Forms.Button btnFours;
+        private System.Windows.Forms.TextBox txtFives;
+        private System.Windows.Forms.Button btnFives;
+        private System.Windows.Forms.TextBox txtSixes;
+        private System.Windows.Forms.Button btnSixes;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBonus1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

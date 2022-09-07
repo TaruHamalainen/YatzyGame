@@ -24,6 +24,8 @@ namespace YatzyGame
         private int rolls = 3;
         private Random rand = new Random();
         private int sectionOneScores;
+        private int totalScores;
+        private int sectionOneBonus = 50;
         public Form1()
         {
             InitializeComponent();
@@ -91,6 +93,16 @@ namespace YatzyGame
               "Warning",
               MessageBoxButtons.OK,
               MessageBoxIcon.Error);
+        }
+        private void CheckFirstSectionBonus()
+        {
+            if(sectionOneScores >= 63)
+            {
+                txtBonus1.Text = sectionOneBonus.ToString();
+                totalScores += sectionOneBonus;
+                txtBonus1.BackColor = Color.Green;
+            }
+            txtTotalScores.Text = totalScores.ToString();
         }
         
         
@@ -413,8 +425,11 @@ namespace YatzyGame
                 return;
             }
             sectionOneScores += scores;
+            totalScores += scores;
             txtSectionOneScores.Text = sectionOneScores.ToString();
-
+            CheckFirstSectionBonus();
+           
+            
             ResetGame();
         }
 
@@ -437,7 +452,11 @@ namespace YatzyGame
                 return;
             }
             sectionOneScores += scores;
+            totalScores += scores;
             txtSectionOneScores.Text = sectionOneScores.ToString();
+            CheckFirstSectionBonus();
+           
+            
             ResetGame();
         }
 
@@ -460,7 +479,89 @@ namespace YatzyGame
                 return;
             }
             sectionOneScores += scores;
+            totalScores += scores;
             txtSectionOneScores.Text = sectionOneScores.ToString();
+            CheckFirstSectionBonus();
+         
+          
+            ResetGame();
+        }
+
+        private void btnFours_Click(object sender, EventArgs e)
+        {
+            int scores = 0;
+            if (txtFours.Text.Equals(string.Empty))
+            {
+                foreach(var dice in dices)
+                {
+                    if (dice.value == 4)
+                        scores += dice.value;
+                }
+                txtFours.Text = scores.ToString();
+            }
+            else
+            {
+                ShowMessage("Value is already inserted");
+                return;
+            }
+            sectionOneScores += scores;
+            totalScores += scores;
+            txtSectionOneScores.Text = sectionOneScores.ToString();
+            CheckFirstSectionBonus();
+         
+          
+            ResetGame();
+        }
+
+        private void btnFives_Click(object sender, EventArgs e)
+        {
+            int scores = 0;
+            if (txtFives.Text.Equals(string.Empty))
+            {
+                foreach (var dice in dices)
+                {
+                    if(dice.value == 5)
+                        scores+=dice.value;
+                }
+                txtFives.Text = scores.ToString();
+            }
+            else
+            {
+                ShowMessage("Value is already inserted");
+                return;
+            }
+            sectionOneScores += scores;
+            totalScores += scores;
+            txtSectionOneScores.Text = sectionOneScores.ToString();
+            CheckFirstSectionBonus();
+        
+    
+            ResetGame();
+        }
+
+        private void btnSixes_Click(object sender, EventArgs e)
+        {
+            int scores = 0;
+            if (txtSixes.Text.Equals(string.Empty))
+            {
+                foreach(var dice in dices)
+                {
+                    if(dice.value == 6)
+                        scores+= dice.value;
+                }
+                txtSixes.Text = scores.ToString();
+            }
+            else
+            {
+                ShowMessage("Value is already inserted");
+                return;
+            }
+            sectionOneScores += scores;
+            totalScores += scores;
+            txtSectionOneScores.Text = sectionOneScores.ToString();
+            CheckFirstSectionBonus();
+       
+         
             ResetGame();
         }
     }
