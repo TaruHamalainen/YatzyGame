@@ -24,6 +24,7 @@ namespace YatzyGame
         private int rolls;
         private Random rand = new Random();
         private bool roundEnded = false;
+        private int sectionOneScores;
         public Form1()
         {
             InitializeComponent();
@@ -406,7 +407,37 @@ namespace YatzyGame
                 "Cant add value",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
+                return;
             }
+            sectionOneScores += scores;
+            txtSectionOneScores.Text = sectionOneScores.ToString();
+
+            ResetGame();
+        }
+
+        private void btnTwos_Click(object sender, EventArgs e)
+        {
+            int scores = 0;
+            if (txtTwos.Text.Equals(string.Empty))
+            {
+                foreach(var dice in dices)
+                {
+                    if(dice.value == 2)
+                        scores+= dice.value;
+                }
+                txtTwos.Text = scores.ToString();
+            }
+            else
+            {
+                MessageBox.Show(
+               "Value already inserted",
+               "Cant add value",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Error);
+               return;
+            }
+            sectionOneScores += scores;
+            txtSectionOneScores.Text = sectionOneScores.ToString();
             ResetGame();
         }
     }

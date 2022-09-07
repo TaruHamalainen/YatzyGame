@@ -37,6 +37,9 @@
             this.dice1 = new System.Windows.Forms.PictureBox();
             this.txtOnes = new System.Windows.Forms.TextBox();
             this.btnOnes = new System.Windows.Forms.Button();
+            this.txtTwos = new System.Windows.Forms.TextBox();
+            this.btnTwos = new System.Windows.Forms.Button();
+            this.txtSectionOneScores = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dice5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
@@ -123,11 +126,38 @@
             this.btnOnes.UseVisualStyleBackColor = true;
             this.btnOnes.Click += new System.EventHandler(this.btnOnes_Click);
             // 
+            // txtTwos
+            // 
+            this.txtTwos.Location = new System.Drawing.Point(142, 231);
+            this.txtTwos.Name = "txtTwos";
+            this.txtTwos.Size = new System.Drawing.Size(100, 20);
+            this.txtTwos.TabIndex = 9;
+            // 
+            // btnTwos
+            // 
+            this.btnTwos.Location = new System.Drawing.Point(46, 234);
+            this.btnTwos.Name = "btnTwos";
+            this.btnTwos.Size = new System.Drawing.Size(75, 23);
+            this.btnTwos.TabIndex = 10;
+            this.btnTwos.Text = "Twos";
+            this.btnTwos.UseVisualStyleBackColor = true;
+            this.btnTwos.Click += new System.EventHandler(this.btnTwos_Click);
+            // 
+            // txtSectionOneScores
+            // 
+            this.txtSectionOneScores.Location = new System.Drawing.Point(142, 382);
+            this.txtSectionOneScores.Name = "txtSectionOneScores";
+            this.txtSectionOneScores.Size = new System.Drawing.Size(100, 20);
+            this.txtSectionOneScores.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtSectionOneScores);
+            this.Controls.Add(this.btnTwos);
+            this.Controls.Add(this.txtTwos);
             this.Controls.Add(this.btnOnes);
             this.Controls.Add(this.txtOnes);
             this.Controls.Add(this.debug);
@@ -161,6 +191,9 @@
         private System.Windows.Forms.TextBox debug;
         private System.Windows.Forms.TextBox txtOnes;
         private System.Windows.Forms.Button btnOnes;
+        private System.Windows.Forms.TextBox txtTwos;
+        private System.Windows.Forms.Button btnTwos;
+        private System.Windows.Forms.TextBox txtSectionOneScores;
     }
 }
 
