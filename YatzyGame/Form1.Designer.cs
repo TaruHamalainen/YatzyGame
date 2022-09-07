@@ -51,6 +51,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBonus1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtThreeOfKind = new System.Windows.Forms.TextBox();
+            this.btnThreeOfKind = new System.Windows.Forms.Button();
+            this.debug = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dice5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
@@ -129,12 +133,13 @@
             // 
             // btnOnes
             // 
+            this.btnOnes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnOnes.Location = new System.Drawing.Point(46, 204);
             this.btnOnes.Name = "btnOnes";
             this.btnOnes.Size = new System.Drawing.Size(75, 23);
             this.btnOnes.TabIndex = 8;
             this.btnOnes.Text = "Ones";
-            this.btnOnes.UseVisualStyleBackColor = true;
+            this.btnOnes.UseVisualStyleBackColor = false;
             this.btnOnes.Click += new System.EventHandler(this.btnOnes_Click);
             // 
             // txtTwos
@@ -146,12 +151,13 @@
             // 
             // btnTwos
             // 
+            this.btnTwos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnTwos.Location = new System.Drawing.Point(46, 229);
             this.btnTwos.Name = "btnTwos";
             this.btnTwos.Size = new System.Drawing.Size(75, 23);
             this.btnTwos.TabIndex = 10;
             this.btnTwos.Text = "Twos";
-            this.btnTwos.UseVisualStyleBackColor = true;
+            this.btnTwos.UseVisualStyleBackColor = false;
             this.btnTwos.Click += new System.EventHandler(this.btnTwos_Click);
             // 
             // txtSectionOneScores
@@ -170,12 +176,13 @@
             // 
             // btnThrees
             // 
+            this.btnThrees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnThrees.Location = new System.Drawing.Point(46, 254);
             this.btnThrees.Name = "btnThrees";
             this.btnThrees.Size = new System.Drawing.Size(75, 23);
             this.btnThrees.TabIndex = 13;
             this.btnThrees.Text = "Threes";
-            this.btnThrees.UseVisualStyleBackColor = true;
+            this.btnThrees.UseVisualStyleBackColor = false;
             this.btnThrees.Click += new System.EventHandler(this.btnThrees_Click);
             // 
             // txtFours
@@ -187,12 +194,13 @@
             // 
             // btnFours
             // 
+            this.btnFours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnFours.Location = new System.Drawing.Point(46, 285);
             this.btnFours.Name = "btnFours";
             this.btnFours.Size = new System.Drawing.Size(75, 23);
             this.btnFours.TabIndex = 15;
             this.btnFours.Text = "Fours";
-            this.btnFours.UseVisualStyleBackColor = true;
+            this.btnFours.UseVisualStyleBackColor = false;
             this.btnFours.Click += new System.EventHandler(this.btnFours_Click);
             // 
             // txtFives
@@ -204,12 +212,13 @@
             // 
             // btnFives
             // 
+            this.btnFives.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnFives.Location = new System.Drawing.Point(46, 315);
             this.btnFives.Name = "btnFives";
             this.btnFives.Size = new System.Drawing.Size(75, 23);
             this.btnFives.TabIndex = 17;
             this.btnFives.Text = "Fives";
-            this.btnFives.UseVisualStyleBackColor = true;
+            this.btnFives.UseVisualStyleBackColor = false;
             this.btnFives.Click += new System.EventHandler(this.btnFives_Click);
             // 
             // txtSixes
@@ -221,12 +230,13 @@
             // 
             // btnSixes
             // 
+            this.btnSixes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnSixes.Location = new System.Drawing.Point(46, 341);
             this.btnSixes.Name = "btnSixes";
             this.btnSixes.Size = new System.Drawing.Size(75, 23);
             this.btnSixes.TabIndex = 19;
             this.btnSixes.Text = "Sixes";
-            this.btnSixes.UseVisualStyleBackColor = true;
+            this.btnSixes.UseVisualStyleBackColor = false;
             this.btnSixes.Click += new System.EventHandler(this.btnSixes_Click);
             // 
             // label1
@@ -255,11 +265,50 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Section Bonus";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(620, 425);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "TOTAL";
+            // 
+            // txtThreeOfKind
+            // 
+            this.txtThreeOfKind.Location = new System.Drawing.Point(517, 204);
+            this.txtThreeOfKind.Name = "txtThreeOfKind";
+            this.txtThreeOfKind.Size = new System.Drawing.Size(100, 20);
+            this.txtThreeOfKind.TabIndex = 24;
+            // 
+            // btnThreeOfKind
+            // 
+            this.btnThreeOfKind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnThreeOfKind.Location = new System.Drawing.Point(623, 204);
+            this.btnThreeOfKind.Name = "btnThreeOfKind";
+            this.btnThreeOfKind.Size = new System.Drawing.Size(90, 23);
+            this.btnThreeOfKind.TabIndex = 25;
+            this.btnThreeOfKind.Text = "Three of kind";
+            this.btnThreeOfKind.UseVisualStyleBackColor = false;
+            this.btnThreeOfKind.Click += new System.EventHandler(this.btnThreeOfKind_Click);
+            // 
+            // debug
+            // 
+            this.debug.Location = new System.Drawing.Point(432, 317);
+            this.debug.Name = "debug";
+            this.debug.Size = new System.Drawing.Size(100, 20);
+            this.debug.TabIndex = 26;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.debug);
+            this.Controls.Add(this.btnThreeOfKind);
+            this.Controls.Add(this.txtThreeOfKind);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBonus1);
             this.Controls.Add(this.label1);
@@ -284,7 +333,7 @@
             this.Controls.Add(this.dice2);
             this.Controls.Add(this.dice1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Yatzy";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dice5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).EndInit();
@@ -321,6 +370,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBonus1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtThreeOfKind;
+        private System.Windows.Forms.Button btnThreeOfKind;
+        private System.Windows.Forms.TextBox debug;
     }
 }
 

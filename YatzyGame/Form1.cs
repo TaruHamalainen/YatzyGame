@@ -564,5 +564,67 @@ namespace YatzyGame
          
             ResetGame();
         }
+
+        private void btnThreeOfKind_Click(object sender, EventArgs e)
+        {
+            int scores = 0;
+            bool threeOfKind = false;
+           
+            
+            Dice[] sortedDices = new Dice[dices.Count];
+            List<Dice> matchedDices = new List<Dice>();
+
+            for(int i = 0; i < dices.Count; i++)
+            {
+                sortedDices[i] = dices[i];
+            }
+
+            Array.Sort(sortedDices);
+
+            if (sortedDices[0].value == sortedDices[1].value&&
+                sortedDices[1].value == sortedDices[2].value)
+            {
+                matchedDices.Add(sortedDices[0]);
+                matchedDices.Add(sortedDices[1]);
+                matchedDices.Add(sortedDices[2]);
+                threeOfKind = true;
+
+                foreach(var dice in matchedDices)
+                {
+                    scores += dice.value;
+                }
+                
+            }
+            
+            if (sortedDices[2].value == sortedDices[3].value &&
+                sortedDices[3].value == sortedDices[4].value)
+            {
+                matchedDices.Add(sortedDices[2]);
+                matchedDices.Add(sortedDices[3]);
+                matchedDices.Add(sortedDices[4]);
+                threeOfKind = true;
+
+                foreach(var dice in matchedDices)
+                {
+                    scores += dice.value;
+                }
+            }
+            if(txtThreeOfKind.Text.Equals(string.Empty))
+                txtThreeOfKind.Text = scores.ToString();
+            else
+            {
+                ShowMessage("Cant add");
+                return;
+            }
+            debug.Text = threeOfKind.ToString();
+            
+
+           
+           
+
+
+            
+            
+        }
     }
 }
