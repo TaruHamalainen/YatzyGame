@@ -761,6 +761,31 @@ namespace YatzyGame
         {
             // 2,3,4,5,6
             // 20 points
+            int scores = 0;
+            Dice[] sortedDices = new Dice[dices.Count];
+            for(int i = 0; i < dices.Count; i++)
+            {
+                sortedDices[i] = dices[i];
+            }
+            Array.Sort(sortedDices);
+
+            if (sortedDices[0].value == 2 &&
+                sortedDices[1].value == 3 &&
+                sortedDices[2].value == 4 &&
+                sortedDices[3].value == 5 &&
+                sortedDices[4].value == 6)
+            {
+                scores += 20;
+            }
+            else
+                scores = 0;
+            if (txtLargeStraight.Text.Equals(string.Empty))
+                txtLargeStraight.Text = scores.ToString();
+            else
+            {
+                ShowMessage("Cant insert");
+                return;
+            }
         }
 
         private void btnYatzy_Click(object sender, EventArgs e)
