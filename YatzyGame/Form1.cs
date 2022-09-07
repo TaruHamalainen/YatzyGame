@@ -21,6 +21,7 @@ namespace YatzyGame
             new Dice()
         };
         private List<PictureBox> pictureBoxes = new List<PictureBox>();
+        private List<TextBox> textBoxes = new List<TextBox>();
         private int rolls;
         private Random rand = new Random();
         private int sectionOneScores;
@@ -39,7 +40,25 @@ namespace YatzyGame
             pictureBoxes.Add(dice3);
             pictureBoxes.Add(dice4);
             pictureBoxes.Add(dice5);
-          
+
+            textBoxes.Add(txtOnes);
+            textBoxes.Add(txtTwos);
+            textBoxes.Add(txtThrees);
+            textBoxes.Add(txtFours);
+            textBoxes.Add(txtFives);
+            textBoxes.Add(txtSixes);
+            textBoxes.Add(txtThreeOfKind);
+            textBoxes.Add(txtFourOfKind);
+            textBoxes.Add(txtFullHouse);
+            textBoxes.Add(txtSmallStraight);
+            textBoxes.Add(txtLargeStraight);
+            textBoxes.Add(txtYatzy);
+            textBoxes.Add(txtChance);
+
+
+
+
+
         }
         private void SetDiceImage(int value,PictureBox box)
         {
