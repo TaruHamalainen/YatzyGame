@@ -24,6 +24,7 @@ namespace YatzyGame
         private int rolls;
         private Random rand = new Random();
         private int sectionOneScores;
+        private int sectionTwoScores;
         private int totalScores;
         private int sectionOneBonus = 50;
         public Form1()
@@ -642,6 +643,10 @@ namespace YatzyGame
                 ShowMessage("Cant add");
                 return;
             }
+            sectionTwoScores += scores;
+            totalScores += scores;
+            txtTotalScores.Text = totalScores.ToString();
+            txtSection2Total.Text = sectionTwoScores.ToString();
             ResetGame();
           
             
@@ -698,9 +703,12 @@ namespace YatzyGame
                 ShowMessage("Cant add");
                 return;
             }
+            totalScores += scores;
+            txtTotalScores.Text = totalScores.ToString();
+            sectionTwoScores += scores;
+            txtSection2Total.Text = sectionTwoScores.ToString();
             ResetGame();
 
-            txtRolls.Text = fourOfKind.ToString();
         }
 
         private void btnFullHouse_Click(object sender, EventArgs e)
@@ -741,7 +749,11 @@ namespace YatzyGame
                 txtFullHouse.Text = scores.ToString();
             else
                 ShowMessage("Cant insert");
-           
+
+            totalScores += scores;
+            txtTotalScores.Text = totalScores.ToString();
+            sectionTwoScores += scores;
+            txtSection2Total.Text = sectionTwoScores.ToString();
             ResetGame();
         }
 
@@ -774,6 +786,11 @@ namespace YatzyGame
                 ShowMessage("Cant insert");
                 return;
             }
+            totalScores += scores;
+            txtTotalScores.Text = totalScores.ToString();
+            sectionTwoScores += scores;
+            txtSection2Total.Text = sectionTwoScores.ToString();
+            ResetGame();
 
             
         }
@@ -807,6 +824,11 @@ namespace YatzyGame
                 ShowMessage("Cant insert");
                 return;
             }
+            totalScores += scores;
+            txtTotalScores.Text = totalScores.ToString();
+            sectionTwoScores += scores;
+            txtSection2Total.Text = sectionTwoScores.ToString();
+            ResetGame();
         }
 
         private void btnYatzy_Click(object sender, EventArgs e)
@@ -827,6 +849,11 @@ namespace YatzyGame
                 ShowMessage("Cant insert");
                 return;
             }
+            totalScores += scores;
+            txtTotalScores.Text = totalScores.ToString();
+            sectionTwoScores += scores;
+            txtSection2Total.Text = sectionTwoScores.ToString();
+            ResetGame();
                
 
         }
@@ -841,6 +868,11 @@ namespace YatzyGame
             }
             if (txtChance.Text.Equals(string.Empty))
                 txtChance.Text += scores.ToString();
+            totalScores += scores;
+            txtTotalScores.Text = totalScores.ToString();
+            sectionTwoScores += scores;
+            txtSection2Total.Text = sectionTwoScores.ToString();
+            ResetGame();
         }
     }
 }
