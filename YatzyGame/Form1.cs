@@ -86,5 +86,65 @@ namespace YatzyGame
         {
             RollDice();
         }
+
+        private void Dice1Hold(object sender, EventArgs e)
+        {
+            if (!dices[0].hold)
+            {
+                dices[0].hold = true;
+
+                switch (dices[0].value)
+                {
+                    case 1:
+                        pictureBoxes[0].Image = Properties.Resources.dice_1_red;
+                        break;
+                    case 2:
+                        pictureBoxes[0].Image = Properties.Resources.dice_2_red;
+                        break;
+                    case 3:
+                        pictureBoxes[0].Image = Properties.Resources.dice_3_red;
+                        break;
+                    case 4:
+                        pictureBoxes[0].Image = Properties.Resources.dice_4_red;
+                        break;
+                    case 5:
+                        pictureBoxes[0].Image = Properties.Resources.dice_5_red;
+                        break;
+                    case 6:
+                        pictureBoxes[0].Image = Properties.Resources.dice_6_red;
+                        break;
+
+                }
+                
+            }
+            else
+            {
+                dices[0].hold = false;
+
+                switch (dices[0].value)
+                {
+                    case 1:
+                        pictureBoxes[0].Image = Properties.Resources.dice_1;
+                        break;
+                    case 2:
+                        pictureBoxes[0].Image = Properties.Resources.dice_2;
+                        break;
+                    case 3:
+                        pictureBoxes[0].Image = Properties.Resources.dice_3;
+                        break;
+                    case 4:
+                        pictureBoxes[0].Image = Properties.Resources.dice_4;
+                        break;
+                    case 5:
+                        pictureBoxes[0].Image = Properties.Resources.dice_5;
+                        break;
+                    case 6:
+                        pictureBoxes[0].Image = Properties.Resources.dice_6;
+                        break;
+
+                }
+
+            }
+        }
     }
 }

@@ -99,5 +99,23 @@
   <ItemGroup>
     <None Include="Resources\dice_6.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice_1_red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice_2_red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice_3_red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice_4_red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice_5_red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice_6_red.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
