@@ -21,16 +21,13 @@ namespace YatzyGame
             new Dice()
         };
         private List<PictureBox> pictureBoxes = new List<PictureBox>();
-        private int rolls;
+        private int rolls = 3;
         private Random rand = new Random();
-        private bool roundEnded = false;
         private int sectionOneScores;
         public Form1()
         {
             InitializeComponent();
             InitializeGame();
-
-          
         }
         private void InitializeGame()
         {
@@ -87,6 +84,16 @@ namespace YatzyGame
             }
             
         }
+        private void ShowMessage(string message)
+        {
+              MessageBox.Show(
+              message,
+              "Warning",
+              MessageBoxButtons.OK,
+              MessageBoxIcon.Error);
+        }
+        
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -402,11 +409,7 @@ namespace YatzyGame
             }
             else
             {
-                MessageBox.Show(
-                "Value already inserted",
-                "Cant add value",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
+                ShowMessage("Value is already inserted");
                 return;
             }
             sectionOneScores += scores;
@@ -429,12 +432,32 @@ namespace YatzyGame
             }
             else
             {
-                MessageBox.Show(
-               "Value already inserted",
-               "Cant add value",
-               MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
-               return;
+                ShowMessage("Value is already inserted");
+
+                return;
+            }
+            sectionOneScores += scores;
+            txtSectionOneScores.Text = sectionOneScores.ToString();
+            ResetGame();
+        }
+
+        private void btnThrees_Click(object sender, EventArgs e)
+        {
+            int scores = 0;
+            if (txtThrees.Text.Equals(string.Empty))
+            {
+                foreach(var dice in dices)
+                {
+                    if (dice.value == 3)
+                        scores += dice.value;
+                }
+                txtThrees.Text = scores.ToString();
+            }
+            else
+            {
+                ShowMessage("Value is already inserted");
+
+                return;
             }
             sectionOneScores += scores;
             txtSectionOneScores.Text = sectionOneScores.ToString();
