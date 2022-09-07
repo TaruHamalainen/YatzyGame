@@ -35,6 +35,8 @@
             this.dice3 = new System.Windows.Forms.PictureBox();
             this.dice2 = new System.Windows.Forms.PictureBox();
             this.dice1 = new System.Windows.Forms.PictureBox();
+            this.txtOnes = new System.Windows.Forms.TextBox();
+            this.btnOnes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dice5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
@@ -54,7 +56,7 @@
             // 
             // debug
             // 
-            this.debug.Location = new System.Drawing.Point(113, 204);
+            this.debug.Location = new System.Drawing.Point(668, 418);
             this.debug.Name = "debug";
             this.debug.Size = new System.Drawing.Size(100, 20);
             this.debug.TabIndex = 6;
@@ -104,11 +106,30 @@
             this.dice1.TabStop = false;
             this.dice1.Click += new System.EventHandler(this.Dice1Hold);
             // 
+            // txtOnes
+            // 
+            this.txtOnes.Location = new System.Drawing.Point(142, 204);
+            this.txtOnes.Name = "txtOnes";
+            this.txtOnes.Size = new System.Drawing.Size(100, 20);
+            this.txtOnes.TabIndex = 7;
+            // 
+            // btnOnes
+            // 
+            this.btnOnes.Location = new System.Drawing.Point(46, 204);
+            this.btnOnes.Name = "btnOnes";
+            this.btnOnes.Size = new System.Drawing.Size(75, 23);
+            this.btnOnes.TabIndex = 8;
+            this.btnOnes.Text = "Ones";
+            this.btnOnes.UseVisualStyleBackColor = true;
+            this.btnOnes.Click += new System.EventHandler(this.btnOnes_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnOnes);
+            this.Controls.Add(this.txtOnes);
             this.Controls.Add(this.debug);
             this.Controls.Add(this.btnRoll);
             this.Controls.Add(this.dice5);
@@ -138,6 +159,8 @@
         private System.Windows.Forms.PictureBox dice5;
         private System.Windows.Forms.Button btnRoll;
         private System.Windows.Forms.TextBox debug;
+        private System.Windows.Forms.TextBox txtOnes;
+        private System.Windows.Forms.Button btnOnes;
     }
 }
 

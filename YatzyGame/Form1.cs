@@ -23,6 +23,7 @@ namespace YatzyGame
         private List<PictureBox> pictureBoxes = new List<PictureBox>();
         private int rolls;
         private Random rand = new Random();
+        private bool roundEnded = false;
         public Form1()
         {
             InitializeComponent();
@@ -75,6 +76,15 @@ namespace YatzyGame
                 }
             }
 
+        }
+        private void ResetGame()
+        {
+            for(int i = 0; i < dices.Count; i++)
+            {
+                dices[i] = new Dice();
+                pictureBoxes[i].Image = null;
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -375,6 +385,29 @@ namespace YatzyGame
                         break;
                 }
             }
+        }
+
+        private void btnOnes_Click(object sender, EventArgs e)
+        {
+            int scores = 0;
+            if (txtOnes.Text.Equals(string.Empty))
+            {
+                foreach (var dice in dices)
+                {
+                    if (dice.value == 1)
+                        scores += dice.value;
+                }
+                txtOnes.Text = scores.ToString();
+            }
+            else
+            {
+                MessageBox.Show(
+                "Value already inserted",
+                "Cant add value",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            }
+            ResetGame();
         }
     }
 }
