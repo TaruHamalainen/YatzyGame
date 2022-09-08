@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +55,21 @@ namespace YatzyGame
             textBoxes.Add(txtLargeStraight);
             textBoxes.Add(txtYatzy);
             textBoxes.Add(txtChance);
+
+            foreach(var box in textBoxes)
+            {
+                box.Text = null;
+            }
+
+            txtSection2Total.Text = null;
+            txtSectionOneScores.Text = null;
+            txtTotalScores.Text = null;
+            totalScores = 0;
+
+            
+
+            labelScores.Visible = false;
+            labelFinalScore.Visible = false;
         }
         private void SetDiceImage(int value,PictureBox box)
         {
@@ -99,6 +115,8 @@ namespace YatzyGame
             rolls = 0;
             txtRolls.Text = rolls.ToString();   
             btnRoll.Enabled = true;
+            labelScores.Visible = false;
+            labelFinalScore.Visible = false;
             for (int i = 0; i < dices.Count; i++)
             {
                 dices[i] = new Dice();
@@ -107,43 +125,29 @@ namespace YatzyGame
         }
         private void CheckGameOver()
         {
-            //bool over = false;
-
-            //for(int i = 0; i < textBoxes.Count; i++)
-            //{
-            //    if (textBoxes[i].Text.Equals(string.Empty))
-            //    {
-            //        over = false;
-            //    }
-            //    else
-            //    {
-            //        over = true;
-            //    }
-            //}
-            //if (over)
-            //{
-            //    ShowMessage("Over");
-            //}
-
-            ////foreach(var box in textBoxes)
-            ////{
-            ////    if (!box.Text.Equals(string.Empty))
-            ////        over = true;
-            ////    else
-            ////    {
-            ////        over = false;
-            ////    }
-
-            ////}
-            ////if (over)
-            ////{
-            ////    // TODO; game over
-            ////    ShowMessage("Over");
-            ////}
-               
-
+            int count = 0;
+            for(int i = 0; i< textBoxes.Count; i++)
+            {
+                if (!textBoxes[i].Text.Equals(string.Empty))
+                    count++;
+            }
+            if(count == 13)
+            {
+                labelScores.Visible = true;
+                labelFinalScore.Visible = true;
+                labelScores.Text = totalScores.ToString();
+                DialogResult response = MessageBox.Show(
+                "Game ended, Want to Play again?","Play Again?",
+                MessageBoxButtons.YesNo);
+                if (response == DialogResult.Yes)
+                    InitializeGame();
+                else
+                    Close();
+            }
 
         }
+
+       
         private void ShowMessage(string message)
         {
               MessageBox.Show(
@@ -502,7 +506,9 @@ namespace YatzyGame
             sectionOneScores += scores;
             totalScores += scores;
             txtSectionOneScores.Text = sectionOneScores.ToString();
+
             CheckFirstSectionBonus();
+            CheckGameOver();
 
          
             ResetGame();
@@ -531,7 +537,8 @@ namespace YatzyGame
             txtSectionOneScores.Text = sectionOneScores.ToString();
             CheckFirstSectionBonus();
            
-            
+            CheckGameOver();
+
 
             ResetGame();
         }
@@ -559,7 +566,8 @@ namespace YatzyGame
             txtSectionOneScores.Text = sectionOneScores.ToString();
             CheckFirstSectionBonus();
          
-           
+            CheckGameOver();
+
 
             ResetGame();
         }
@@ -586,7 +594,8 @@ namespace YatzyGame
             txtSectionOneScores.Text = sectionOneScores.ToString();
             CheckFirstSectionBonus();
          
-           
+            CheckGameOver();
+
 
             ResetGame();
         }
@@ -613,7 +622,8 @@ namespace YatzyGame
             txtSectionOneScores.Text = sectionOneScores.ToString();
             CheckFirstSectionBonus();
         
-            
+            CheckGameOver();
+
 
             ResetGame();
         }
@@ -640,7 +650,8 @@ namespace YatzyGame
             txtSectionOneScores.Text = sectionOneScores.ToString();
             CheckFirstSectionBonus();
        
-           
+            CheckGameOver();
+
 
             ResetGame();
         }
@@ -705,7 +716,8 @@ namespace YatzyGame
             totalScores += scores;
             txtTotalScores.Text = totalScores.ToString();
             txtSection2Total.Text = sectionTwoScores.ToString();
-         
+
+            CheckGameOver();
 
             ResetGame();
           
@@ -767,7 +779,8 @@ namespace YatzyGame
             txtTotalScores.Text = totalScores.ToString();
             sectionTwoScores += scores;
             txtSection2Total.Text = sectionTwoScores.ToString();
-            
+
+            CheckGameOver();
 
             ResetGame();
 
@@ -816,7 +829,8 @@ namespace YatzyGame
             txtTotalScores.Text = totalScores.ToString();
             sectionTwoScores += scores;
             txtSection2Total.Text = sectionTwoScores.ToString();
-            
+            CheckGameOver();
+
 
             ResetGame();
         }
@@ -854,7 +868,8 @@ namespace YatzyGame
             txtTotalScores.Text = totalScores.ToString();
             sectionTwoScores += scores;
             txtSection2Total.Text = sectionTwoScores.ToString();
-            
+
+            CheckGameOver();
 
             ResetGame();
 
@@ -894,7 +909,8 @@ namespace YatzyGame
             txtTotalScores.Text = totalScores.ToString();
             sectionTwoScores += scores;
             txtSection2Total.Text = sectionTwoScores.ToString();
-           
+
+            CheckGameOver();
 
             ResetGame();
         }
@@ -921,7 +937,8 @@ namespace YatzyGame
             txtTotalScores.Text = totalScores.ToString();
             sectionTwoScores += scores;
             txtSection2Total.Text = sectionTwoScores.ToString();
-          
+
+            CheckGameOver();
 
             ResetGame();
                
@@ -942,7 +959,8 @@ namespace YatzyGame
             txtTotalScores.Text = totalScores.ToString();
             sectionTwoScores += scores;
             txtSection2Total.Text = sectionTwoScores.ToString();
-           
+
+            CheckGameOver();
 
             ResetGame();
         }

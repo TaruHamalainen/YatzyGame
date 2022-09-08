@@ -69,6 +69,8 @@
             this.btnChance = new System.Windows.Forms.Button();
             this.txtSection2Total = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelFinalScore = new System.Windows.Forms.Label();
+            this.labelScores = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dice5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
@@ -437,12 +439,36 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "Section Total";
             // 
+            // labelFinalScore
+            // 
+            this.labelFinalScore.AutoSize = true;
+            this.labelFinalScore.BackColor = System.Drawing.Color.Red;
+            this.labelFinalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFinalScore.Location = new System.Drawing.Point(249, 212);
+            this.labelFinalScore.Name = "labelFinalScore";
+            this.labelFinalScore.Size = new System.Drawing.Size(262, 25);
+            this.labelFinalScore.TabIndex = 41;
+            this.labelFinalScore.Text = "Your Total Scores Was:";
+            // 
+            // labelScores
+            // 
+            this.labelScores.AutoSize = true;
+            this.labelScores.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScores.ForeColor = System.Drawing.Color.Red;
+            this.labelScores.Location = new System.Drawing.Point(357, 265);
+            this.labelScores.Name = "labelScores";
+            this.labelScores.Size = new System.Drawing.Size(36, 37);
+            this.labelScores.TabIndex = 42;
+            this.labelScores.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelScores);
+            this.Controls.Add(this.labelFinalScore);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSection2Total);
             this.Controls.Add(this.btnChance);
@@ -540,6 +566,8 @@
         private System.Windows.Forms.Button btnChance;
         private System.Windows.Forms.TextBox txtSection2Total;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelFinalScore;
+        private System.Windows.Forms.Label labelScores;
     }
 }
 
